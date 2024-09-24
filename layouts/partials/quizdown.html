@@ -1,4 +1,4 @@
-<script
+<!-- <script
 src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/quizdown.js">
 </script>
 <script
@@ -6,7 +6,13 @@ src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdo
 </script>
 <script
 src="https://cdn.jsdelivr.net/npm/quizdown@latest/public/build/extensions/quizdownHighlight.js">
-</script>
+</script> -->
+<script src="{{"js/build/quizdown.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="{{"js/build/extensions/quizdownKatex.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<script src="{{"js/build/extensions/quizdownHighlight.js" | relURL}}{{ if not .Site.Params.disableAssetsBusting }}?{{ now.Unix }}{{ end }}"></script>
+<!-- <script src="./build/quizdown.js"></script>
+<script src="./build/extensions/quizdownKatex.js"></script>
+<script src="./build/extensions/quizdownHighlight.js"></script> -->
 <script>
     let urlParams = new URLSearchParams(window.location.search);
     let nQuestionsParam = urlParams.get('questions');
